@@ -1,6 +1,7 @@
-let cash = 50
-let price = 40
-let isStoreOpen = true
+// DRY = Don't repeat yourself
 
-let str = isStoreOpen && cash >= price ? 'give receipt' : 'do not give receipt'
-console.log(str)
+let count = 1
+while (count <= 100) {
+    console.log(count)
+    count = count + 1;
+}
