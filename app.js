@@ -40,44 +40,71 @@ for (let i = 0; i < str.length; ++i) {
 
 
 
-/** 
- *  
+/* 
+
 function convertCelsiusToFahrenheit(celsius) {
     return fahrenheit = celsius * 1.8 + 32
-}
-
-console.log(convertCelsiusToFahrenheit(0))
-console.log(convertCelsiusToFahrenheit(10))
-console.log(convertCelsiusToFahrenheit(30))
-*
+    }
+    
+    console.log(convertCelsiusToFahrenheit(0))
+    console.log(convertCelsiusToFahrenheit(10))
+    console.log(convertCelsiusToFahrenheit(30))
+    
 */
 
 
 
+
+let arr = [20 ,30, 40, 50, 100]
 /* 
-let cart = [20 ,30, 40, 50, 100]
 
 // First element of array:
-console.log(cart[0])
+console.log(arr[0])
 
 //Last element of array:
-console.log(cart[cart.length - 1])
+console.log(arr[arr.length - 1])
 
 //Add element onto end of array:
-cart.push(200)
-console.log(cart)
+arr.push(200)
+console.log(arr);
 
 //Filter array
-let newCart = cart.filter((element) => {
+let newArr = arr.filter((element) => {
     if (element < 50) {
         return true;
     }
 })
-console.log(newCart)
+console.log(newArr);
 
 //Simplified version of above
 
 let newCart = cart.filter(element => element < 50)
 console.log(newCart)
+
 */
 
+//EXERCISE
+
+/**
+let grades = ['A+', 'A', 'FAIL']
+
+ let goodGrades = grades.filter((element) => {
+    console.log(element)
+    if (element !== 'FAIL')
+    return true;
+})
+console.log(goodGrades)
+
+let goodGrades = grades.filter(element => element !== 'FAIL')
+console.log(goodGrades)
+
+*/
+let grades = ['A+', 'A', 'FAIL']
+let goodGrades = []
+
+for (let i = 0; i < grades.length; ++i){
+    if (grades[i] !== 'FAIL') {
+        goodGrades.push(grades[i]);
+    }
+}
+console.log(goodGrades);
