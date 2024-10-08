@@ -54,15 +54,30 @@ console.log(convertCelsiusToFahrenheit(30))
 
 
 
-let arr = [20 ,30, 40, 50, 100]
+/* 
+let cart = [20 ,30, 40, 50, 100]
 
 // First element of array:
-console.log(arr[0])
+console.log(cart[0])
 
 //Last element of array:
-console.log(arr[arr.length - 1])
+console.log(cart[cart.length - 1])
 
 //Add element onto end of array:
-arr.push(200)
+cart.push(200)
+console.log(cart)
 
-console.log(arr)
+//Filter array
+let newCart = cart.filter((element) => {
+    if (element < 50) {
+        return true;
+    }
+})
+console.log(newCart)
+
+//Simplified version of above
+
+let newCart = cart.filter(element => element < 50)
+console.log(newCart)
+*/
+
