@@ -1,5 +1,7 @@
 // DRY = Don't repeat yourself
 
+// LOOPS
+
 // let count = 1
 // while (count <= 100) {
 //     console.log(count)
@@ -27,7 +29,6 @@ for (let i = 1; i <= 20; i++) {
 */
 
 
-
 /**
  *  
 const str = "Frontend Simplified"
@@ -38,7 +39,7 @@ for (let i = 0; i < str.length; ++i) {
 *
 */
 
-
+// FUNCTIONS
 
 /* 
 
@@ -53,10 +54,10 @@ function convertCelsiusToFahrenheit(celsius) {
 */
 
 
+// ARAYS
 
-
-let arr = [20 ,30, 40, 50, 100]
 /* 
+let arr = [20 ,30, 40, 50, 100]
 
 // First element of array:
 console.log(arr[0])
@@ -83,23 +84,23 @@ console.log(newCart)
 
 */
 
+/**
 //EXERCISE
 
-/**
 let grades = ['A+', 'A', 'FAIL']
 
+// With Filter Method
  let goodGrades = grades.filter((element) => {
-    console.log(element)
     if (element !== 'FAIL')
     return true;
 })
 console.log(goodGrades)
 
+// Simplified solution
 let goodGrades = grades.filter(element => element !== 'FAIL')
 console.log(goodGrades)
 
-*/
-let grades = ['A+', 'A', 'FAIL']
+// Solution with a For Loop
 let goodGrades = []
 
 for (let i = 0; i < grades.length; ++i){
@@ -107,4 +108,68 @@ for (let i = 0; i < grades.length; ++i){
         goodGrades.push(grades[i]);
     }
 }
-console.log(goodGrades);
+console.log(goodGrades)
+*/
+
+
+/**
+let dollars = [1, 5, 10, 3];
+// With Array Map Method
+let cents = dollars.map((element) => {
+    return element * 100
+})
+
+let cents = dollars.map(element => element * 100)
+
+console.log(cents)
+let cents = [];
+
+for (let i = 0; i < dollars.length; i++) {
+    cents.push(dollars[i] * 100)
+}
+console.log(cents)
+*/
+
+// OBJECTS
+
+let users = [
+    {
+        username: "Francisco",
+        email: "falf555@gmail.com",
+        password: 'test3210',
+        discordId: "Kavics#0246",
+        lessonsCompleted: [0, 1, 2],
+    },
+    {
+        username: "David",
+        email: "david@frontendsimplified.com",
+        password: 'test0123',
+        discordId: "David Bragg#0001",
+        lessonsCompleted: [0, 1, 2, 3],
+    },
+    {
+        username: "Zen",
+        email: "Zen@frontendsimplified.com",
+        password: 'Zen123',
+        discordId: "Zen#0002",
+        lessonsCompleted: [0, 1, 2, 3, 4],
+    },
+];
+
+function login(email, password) {
+    for (let i = 0; i < users.length; ++i) {
+        if (users[i].email === email) {
+            console.log(users[i]);
+            if (users[i].password === password) {
+                console.log('log the user in - the details are correct')
+            }
+            else {
+                console.log('password is incorrect - try again')
+            }
+            return;
+        }
+    }
+    console.log('could not find an email that matches')
+}
+
+login('falf555@gmail.com', 'test3210');
