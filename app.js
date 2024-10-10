@@ -8,8 +8,6 @@
 //     count = count + 1;
 // }
 
-
-
 /**
  *
 for (let i = 1; i <= 20; i++) {
@@ -27,7 +25,6 @@ for (let i = 1; i <= 20; i++) {
 }
 *
 */
-
 
 /**
  *  
@@ -52,7 +49,6 @@ function convertCelsiusToFahrenheit(celsius) {
     console.log(convertCelsiusToFahrenheit(30))
     
 */
-
 
 // ARAYS
 
@@ -111,7 +107,6 @@ for (let i = 0; i < grades.length; ++i){
 console.log(goodGrades)
 */
 
-
 /**
 let dollars = [1, 5, 10, 3];
 // With Array Map Method
@@ -131,7 +126,8 @@ console.log(cents)
 */
 
 // OBJECTS
-
+/**
+ 
 let users = [
     {
         username: "Francisco",
@@ -165,11 +161,35 @@ function login(email, password) {
             }
             else {
                 console.log('password is incorrect - try again')
-            }
-            return;
         }
+        return;
     }
-    console.log('could not find an email that matches')
+}
+console.log('could not find an email that matches')
 }
 
 login('falf555@gmail.com', 'test3210');
+
+//EXERCISE
+
+let users = []
+
+function register(user) {
+    users.push(user);
+}
+
+register({
+    username: "Zen",
+    email: "zen@frontendsimplified.com",
+    password: "zen123",
+    subscriptionStatus: "VIP",
+    discordId: "Zen#0002",
+    lessonsCompleted: [0, 1],
+});
+
+console.log(users); 
+*/
+
+// First way of accessing an element
+
+// Second way of accessing an elemnt
