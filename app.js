@@ -190,6 +190,26 @@ register({
 console.log(users); 
 */
 
+/**  
+
 // First way of accessing an element
+document.querySelector('#title')
 
 // Second way of accessing an elemnt
+document.getElementById('title')
+
+// Change HTML
+document.querySelector('.title').innerHTML = 'Frontend Simplified'
+
+// Add HTML
+document.querySelector('.title').innerHTML += 'Frontend Simplified'
+
+// Change CSS
+document.querySelector('.title').style.color = 'red'
+
+*/
+// Click Listeners
+function changeTitleToRed() {
+    document.querySelector('.title').style.color = 'red'; 
+    console.log('clicked');
+}
