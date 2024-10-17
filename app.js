@@ -217,6 +217,8 @@ function changeTitleToRed() {
 // PROMISES //
 //fetch("https://jsonplaceholder.typicode.com/users/1")
 const emailRef = document.querySelector(".email");
+const nameRef = document.querySelector(".name");
+const phoneRef = document.querySelector(".phone");
 /**
 
 // 1. Then
@@ -230,12 +232,15 @@ fetch("https://jsonplaceholder.typicode.com/users/1")
 });
 
 */
-// 2. Async /Await
+// 2. Async/Await
 async function main() {
     const response = await fetch("https://jsonplaceholder.typicode.com/users/1")
     const data = await response.json()
     console.log(data)
     emailRef.innerHTML = data.email
+    nameRef.innerHTML = data.name
+    phoneRef.innerHTML = data.phone
+
 }
 
 main();
