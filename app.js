@@ -219,19 +219,20 @@ function changeTitleToRed() {
 const emailRef = document.querySelector(".email");
 const nameRef = document.querySelector(".name");
 const phoneRef = document.querySelector(".phone");
-/**
 
 // 1. Then
 fetch("https://jsonplaceholder.typicode.com/users/1")
-.then((response) => {
+  .then((response) => {
     return response.json();
-})
-.then((data) => {
+  })
+  .then((data) => {
+    emailRef.innerHTML = data.email;
+    nameRef.innerHTML = data.name;
+    phoneRef.innerHTML = data.phone;
     console.log(data);
-    emailRef.innerHTML = data.email
-});
+  });
 
-*/
+/**
 // 2. Async/Await
 async function main() {
     const response = await fetch("https://jsonplaceholder.typicode.com/users/1")
@@ -240,7 +241,8 @@ async function main() {
     emailRef.innerHTML = data.email
     nameRef.innerHTML = data.name
     phoneRef.innerHTML = data.phone
-
+    
 }
 
+*/
 main();
