@@ -216,9 +216,10 @@ function changeTitleToRed() {
 
 // PROMISES //
 //fetch("https://jsonplaceholder.typicode.com/users/1")
-const emailRef = document.querySelector(".email");
-const nameRef = document.querySelector(".name");
-const phoneRef = document.querySelector(".phone");
+// const emailRef = document.querySelector(".email");
+// const nameRef = document.querySelector(".name");
+// const phoneRef = document.querySelector(".phone");
+/**
 
 // 1. Then
 fetch("https://jsonplaceholder.typicode.com/users/1")
@@ -232,17 +233,34 @@ fetch("https://jsonplaceholder.typicode.com/users/1")
     console.log(data);
   });
 
-/**
+  */
 // 2. Async/Await
-async function main() {
-    const response = await fetch("https://jsonplaceholder.typicode.com/users/1")
-    const data = await response.json()
-    console.log(data)
-    emailRef.innerHTML = data.email
-    nameRef.innerHTML = data.name
-    phoneRef.innerHTML = data.phone
+// async function main() {
+//     const response = await fetch("https://jsonplaceholder.typicode.com/users/1")
+//     const data = await response.json()
+//     console.log(data)
+//     emailRef.innerHTML = data.email
+//     nameRef.innerHTML = data.name
+//     phoneRef.innerHTML = data.phone
     
+// }
+
+// main();
+
+// Creating a promisse
+
+function getSubscriptionStatus() {
+    return new Promise((resolve, reject) => {
+        resolve("VIP")
+    })
 }
 
-*/
+// 1. THEN
+getSubscriptionStatus().then(response => console.log(response))
+
+// 2. Async/Await
+async function main() {
+    console.log(await getSubscriptionStatus())
+}
+
 main();
